@@ -1,0 +1,17 @@
+input[type="text"],
+p-dropdown {
+  width: calc(100% - 24px); /* Full width for inputs and dropdowns */
+}
+
+/* Define a mixin to apply common styles to table cells */
+@mixin table-cell-styles {
+  white-space: nowrap; // Prevent line breaks
+  overflow: hidden; // Hide overflowing content
+  text-overflow: ellipsis; // Display ellipsis (...) for truncated text
+  max-width: 200px; // Adjust the maximum width as needed
+}
+
+/* Apply the mixin to table cells */
+td.fit-content {
+  @include table-cell-styles;
+}
